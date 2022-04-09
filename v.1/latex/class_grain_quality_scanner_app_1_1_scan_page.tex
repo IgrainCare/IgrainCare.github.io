@@ -1,0 +1,210 @@
+\hypertarget{class_grain_quality_scanner_app_1_1_scan_page}{}\doxysection{Grain\+Quality\+Scanner\+App.\+Scan\+Page Class Reference}
+\label{class_grain_quality_scanner_app_1_1_scan_page}\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+
+
+Our mainform for this application...  
+
+
+Inheritance diagram for Grain\+Quality\+Scanner\+App.\+Scan\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grain_quality_scanner_app_1_1_scan_page}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a958f569dc577a97bce718340f5a4fca2}\label{class_grain_quality_scanner_app_1_1_scan_page_a958f569dc577a97bce718340f5a4fca2}} 
+{\bfseries Scan\+Page} ()
+\begin{DoxyCompactList}\small\item\em Our constructor... \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a2659d753755f348ca52ece33513a886e}\label{class_grain_quality_scanner_app_1_1_scan_page_a2659d753755f348ca52ece33513a886e}} 
+delegate void {\bfseries Scan\+Callback\+Event} ()
+\begin{DoxyCompactList}\small\item\em Our scan callback event, used to drive the engine when scanning... \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_ad804a2fade5cb07935a779e289e99587}{Rollback}} (TWAIN.\+STATE a\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Rollback the TWAIN state to whatever is requested... \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_a17c1564f975fab1954177f33e5206174}{Pre\+Filter\+Message}} (ref Message a\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Monitor for DG\+\_\+\+CONTROL / DAT\+\_\+\+NULL / MSG\+\_\+$\ast$ stuff (ex MSG\+\_\+\+XFERREADY), this function is only triggered when \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_af78882cbc669876507bde8f56c8d869b}{Set\+Message\+Filter()}} is called with \textquotesingle{}true\textquotesingle{}... \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_af78882cbc669876507bde8f56c8d869b}{Set\+Message\+Filter}} (bool a\+\_\+bl\+Add)
+\begin{DoxyCompactList}\small\item\em Turn message filtering on or off, we use this to capture stuff like MSG\+\_\+\+XFERREADY. If it\textquotesingle{}s off, then it\textquotesingle{}s assumed we\textquotesingle{}re getting this info through DAT\+\_\+\+CALLBACK2... \end{DoxyCompactList}\item 
+TWAIN.\+STS \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_a0319bc110bfa3c9c3d1d6d0d00ff2154}{Restore\+Snapshot}} (string a\+\_\+sz\+File)
+\begin{DoxyCompactList}\small\item\em Restore a snapshot of driver values... \end{DoxyCompactList}\item 
+TWAIN.\+STS \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_a83f38d0daa243a94539038dca0882707}{Save\+Snapshot}} (string a\+\_\+sz\+File)
+\begin{DoxyCompactList}\small\item\em Save a snapshot of the driver values... \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a08668f3279b279c8ce1364645171ef60}\label{class_grain_quality_scanner_app_1_1_scan_page_a08668f3279b279c8ce1364645171ef60}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries Convert\+Tiff\+To\+Jpeg} (string file\+Name)
+\item 
+bool \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_a1100307ba15a458c4e43eb9b2ddb162b}{Exit\+Requested}} ()
+\begin{DoxyCompactList}\small\item\em Something horrible has happened and we need to abort... \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a48993965172965c894a941a47b8fa2a5}\label{class_grain_quality_scanner_app_1_1_scan_page_a48993965172965c894a941a47b8fa2a5}} 
+void {\bfseries Clear\+Events} ()
+\begin{DoxyCompactList}\small\item\em Clear our event list, and reset our event... \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_ab659b5855f489a60e44eda14bbcd8710}{Run\+In\+Ui\+Thread\+Delegate}} (Object a\+\_\+object, Action a\+\_\+action)
+\begin{DoxyCompactList}\small\item\em We use this to run code in the context of the caller\textquotesingle{}s UI thread... \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_a386a0a91f5c24afc90c913d3185b1ae0}{Run\+In\+Ui\+Thread}} (Object a\+\_\+object, Action a\+\_\+action)
+\begin{DoxyCompactList}\small\item\em TWAIN needs help, if we want it to run stuff in our main UI thread... \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_aca2ba683c32bef113fdae26a77a5e279}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Our mainform for this application... 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_aca2ba683c32bef113fdae26a77a5e279}\label{class_grain_quality_scanner_app_1_1_scan_page_aca2ba683c32bef113fdae26a77a5e279}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a1100307ba15a458c4e43eb9b2ddb162b}\label{class_grain_quality_scanner_app_1_1_scan_page_a1100307ba15a458c4e43eb9b2ddb162b}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!ExitRequested@{ExitRequested}}
+\index{ExitRequested@{ExitRequested}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{ExitRequested()}{ExitRequested()}}
+{\footnotesize\ttfamily bool Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Exit\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Something horrible has happened and we need to abort... 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a17c1564f975fab1954177f33e5206174}\label{class_grain_quality_scanner_app_1_1_scan_page_a17c1564f975fab1954177f33e5206174}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!PreFilterMessage@{PreFilterMessage}}
+\index{PreFilterMessage@{PreFilterMessage}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{PreFilterMessage()}{PreFilterMessage()}}
+{\footnotesize\ttfamily bool Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Pre\+Filter\+Message (\begin{DoxyParamCaption}\item[{ref Message}]{a\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+Monitor for DG\+\_\+\+CONTROL / DAT\+\_\+\+NULL / MSG\+\_\+$\ast$ stuff (ex MSG\+\_\+\+XFERREADY), this function is only triggered when \mbox{\hyperlink{class_grain_quality_scanner_app_1_1_scan_page_af78882cbc669876507bde8f56c8d869b}{Set\+Message\+Filter()}} is called with \textquotesingle{}true\textquotesingle{}... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+message} & Message to process\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of the processing
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a0319bc110bfa3c9c3d1d6d0d00ff2154}\label{class_grain_quality_scanner_app_1_1_scan_page_a0319bc110bfa3c9c3d1d6d0d00ff2154}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!RestoreSnapshot@{RestoreSnapshot}}
+\index{RestoreSnapshot@{RestoreSnapshot}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{RestoreSnapshot()}{RestoreSnapshot()}}
+{\footnotesize\ttfamily TWAIN.\+STS Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Restore\+Snapshot (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+sz\+File }\end{DoxyParamCaption})}
+
+
+
+Restore a snapshot of driver values... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+sz\+File} & File to use to restore driver settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS if the restore succeeded
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_ad804a2fade5cb07935a779e289e99587}\label{class_grain_quality_scanner_app_1_1_scan_page_ad804a2fade5cb07935a779e289e99587}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!Rollback@{Rollback}}
+\index{Rollback@{Rollback}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{Rollback()}{Rollback()}}
+{\footnotesize\ttfamily void Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Rollback (\begin{DoxyParamCaption}\item[{TWAIN.\+STATE}]{a\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Rollback the TWAIN state to whatever is requested... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a386a0a91f5c24afc90c913d3185b1ae0}\label{class_grain_quality_scanner_app_1_1_scan_page_a386a0a91f5c24afc90c913d3185b1ae0}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!RunInUiThread@{RunInUiThread}}
+\index{RunInUiThread@{RunInUiThread}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{RunInUiThread()}{RunInUiThread()}}
+{\footnotesize\ttfamily static void Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Run\+In\+Ui\+Thread (\begin{DoxyParamCaption}\item[{Object}]{a\+\_\+object,  }\item[{Action}]{a\+\_\+action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TWAIN needs help, if we want it to run stuff in our main UI thread... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & the control to run in\\
+\hline
+{\em code} & the code to run\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_ab659b5855f489a60e44eda14bbcd8710}\label{class_grain_quality_scanner_app_1_1_scan_page_ab659b5855f489a60e44eda14bbcd8710}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!RunInUiThreadDelegate@{RunInUiThreadDelegate}}
+\index{RunInUiThreadDelegate@{RunInUiThreadDelegate}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{RunInUiThreadDelegate()}{RunInUiThreadDelegate()}}
+{\footnotesize\ttfamily delegate void Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Run\+In\+Ui\+Thread\+Delegate (\begin{DoxyParamCaption}\item[{Object}]{a\+\_\+object,  }\item[{Action}]{a\+\_\+action }\end{DoxyParamCaption})}
+
+
+
+We use this to run code in the context of the caller\textquotesingle{}s UI thread... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+object} & object (really a control)\\
+\hline
+{\em a\+\_\+action} & code to run\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_a83f38d0daa243a94539038dca0882707}\label{class_grain_quality_scanner_app_1_1_scan_page_a83f38d0daa243a94539038dca0882707}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!SaveSnapshot@{SaveSnapshot}}
+\index{SaveSnapshot@{SaveSnapshot}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{SaveSnapshot()}{SaveSnapshot()}}
+{\footnotesize\ttfamily TWAIN.\+STS Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Save\+Snapshot (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+sz\+File }\end{DoxyParamCaption})}
+
+
+
+Save a snapshot of the driver values... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+sz\+File} & File to receive driver settings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS if the restore succeeded
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_grain_quality_scanner_app_1_1_scan_page_af78882cbc669876507bde8f56c8d869b}\label{class_grain_quality_scanner_app_1_1_scan_page_af78882cbc669876507bde8f56c8d869b}} 
+\index{GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}!SetMessageFilter@{SetMessageFilter}}
+\index{SetMessageFilter@{SetMessageFilter}!GrainQualityScannerApp.ScanPage@{GrainQualityScannerApp.ScanPage}}
+\doxysubsubsection{\texorpdfstring{SetMessageFilter()}{SetMessageFilter()}}
+{\footnotesize\ttfamily void Grain\+Quality\+Scanner\+App.\+Scan\+Page.\+Set\+Message\+Filter (\begin{DoxyParamCaption}\item[{bool}]{a\+\_\+bl\+Add }\end{DoxyParamCaption})}
+
+
+
+Turn message filtering on or off, we use this to capture stuff like MSG\+\_\+\+XFERREADY. If it\textquotesingle{}s off, then it\textquotesingle{}s assumed we\textquotesingle{}re getting this info through DAT\+\_\+\+CALLBACK2... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+bl\+Add} & True to turn it on\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Upwork\+Projects/\+Igrain/\+Project/\+Deliverables/\+Application/source/twaincsscan/source/Scan\+Page.\+cs\item 
+D\+:/\+Upwork\+Projects/\+Igrain/\+Project/\+Deliverables/\+Application/source/twaincsscan/source/Scan\+Page.\+Designer.\+cs\end{DoxyCompactItemize}
