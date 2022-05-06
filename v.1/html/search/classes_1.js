@@ -18,5 +18,7 @@ var searchData=
   ['customermasterreader_15',['CustomerMasterReader',['../class_grain_quality_managment_application_1_1_d_a_l_1_1_customer_master_reader.html',1,'GrainQualityManagmentApplication::DAL']]],
   ['customermasterservice_16',['CustomerMasterService',['../class_grain_quality_managment_application_1_1_services_1_1_customer_master_service.html',1,'GrainQualityManagmentApplication::Services']]],
   ['customermasterupdater_17',['CustomerMasterUpdater',['../class_grain_quality_managment_application_1_1_d_a_l_1_1_writers_1_1_customer_master_updater.html',1,'GrainQualityManagmentApplication::DAL::Writers']]],
-  ['customermasterwriter_18',['CustomerMasterWriter',['../class_grain_quality_managment_application_1_1_d_a_l_1_1_writers_1_1_customer_master_writer.html',1,'GrainQualityManagmentApplication::DAL::Writers']]]
+  ['customermasterwriter_18',['CustomerMasterWriter',['../class_grain_quality_managment_application_1_1_d_a_l_1_1_writers_1_1_customer_master_writer.html',1,'GrainQualityManagmentApplication::DAL::Writers']]],
+  ['customerscreen_19',['CustomerScreen',['../class_grain_quality_managment_application_1_1_screens_1_1_customer_screen_1_1_customer_screen.html',1,'GrainQualityManagmentApplication::Screens::CustomerScreen']]],
+  ['customerselection_20',['CustomerSelection',['../class_grain_quality_managment_application_1_1_d_t_os_1_1_customer_selection.html',1,'GrainQualityManagmentApplication::DTOs']]]
 ];
